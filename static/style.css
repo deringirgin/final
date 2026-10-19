@@ -78,16 +78,16 @@ input[type="file"] {
 }
 
 .btn:hover {
-    background-color: #1d4ed8;
+    background-color: #623258;
 }
 
 .btn-secondary {
-    background-color: #64748b;
+    background-color: #afa100;
     margin-top: 20px;
 }
 
 .btn-secondary:hover {
-    background-color: #475569;
+    background-color: #007740;
 }
 
 /* Sonuç Sayfası - Görsel Kutusu */
@@ -104,13 +104,13 @@ input[type="file"] {
 
 /* AI Analiz Kutusu */
 .result-card {
-    background-color: #f8fafc;
-    border-left: 4px solid #2563eb;
+    background-color: #aad5ff;
+    border-left: 4px solid #071e4f;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
     white-space: pre-line;
     line-height: 1.6;
     font-size: 0.98rem;
-    color: #334155;
+    color: #051730;
 }
