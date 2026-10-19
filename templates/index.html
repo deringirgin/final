@@ -2,23 +2,19 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>MemeDecoder AI - Meme Çevirici</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; padding: 50px; }
-        .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
-        input[type="file"] { margin: 20px 0; }
-        button { background-color: #ff4757; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; }
-        button:hover { background-color: #ff6b81; }
-    </style>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeDecoder AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
 <body>
     <div class="container">
         <h1>🤖 MemeDecoder AI</h1>
-        <p>Meme'i yükle, yapay zeka esprisini ve anlamını Türkçeye çevirsin!</p>
+        <p class="subtitle">Meme görselini yükle, yapay zeka Türkçeye çevirip esprisini açıklasın!</p>
         
         <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*" required><br>
-            <button type="submit">Meme'i Çözümle</button>
+            <div class="upload-box">
+                <input type="file" name="file" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn">Meme'i Çözümle</button>
         </form>
     </div>
 </body>

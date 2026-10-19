@@ -2,29 +2,24 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Analiz Sonucu</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; padding: 30px; }
-        .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; max-width: 600px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: left; }
-        img { max-width: 100%; height: auto; border-radius: 5px; display: block; margin: 0 auto 20px auto; }
-        .result-box { background: #f1f2f6; padding: 15px; border-radius: 5px; white-space: pre-line; line-height: 1.6; }
-        a { display: inline-block; margin-top: 20px; text-decoration: none; background-color: #2ed573; color: white; padding: 10px 20px; border-radius: 5px; }
-        a:hover { background-color: #26af5f; }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="container" style="text-align: center;">
-        <h2>🎯 Meme Analiz Sonucu</h2>
-        
-        <!-- Yüklenen Görsel -->
-        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Yüklenen Meme">
-        
-        <!-- AI Açıklama Kutusu -->
-        <div class="result-box">
+    <div class="container">
+        <h1>🎯 Analiz Sonucu</h1>
+        <p class="subtitle">Yapay Zeka Çözümlemesi</p>
+
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Yuklenen Meme">
+        </div>
+
+        <div class="result-card">
             {{ result }}
         </div>
-        
-        <a href="/">Yeni Bir Meme Çözümle</a>
+
+        <a href="/" class="btn btn-secondary">Yeni Bir Meme Analiz Et</a>
     </div>
 </body>
 </html>

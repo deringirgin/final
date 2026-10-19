@@ -13,10 +13,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
+    margin: 0;
     padding: 20px;
 }
 
-/* Kart Kapsayıcısı */
+/* Kart Kapsayıcısı - Tam Ortada ve Sabit Genişlikte */
 .container {
     background-color: #ffffff;
     padding: 40px;
@@ -25,6 +27,8 @@ body {
     max-width: 650px;
     width: 100%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Başlıklar */
@@ -78,16 +82,16 @@ input[type="file"] {
 }
 
 .btn:hover {
-    background-color: #623258;
+    background-color: #1d4ed8;
 }
 
 .btn-secondary {
-    background-color: #afa100;
+    background-color: #5b1eea;
     margin-top: 20px;
 }
 
 .btn-secondary:hover {
-    background-color: #007740;
+    background-color: #42d200;
 }
 
 /* Sonuç Sayfası - Görsel Kutusu */
@@ -104,13 +108,13 @@ input[type="file"] {
 
 /* AI Analiz Kutusu */
 .result-card {
-    background-color: #aad5ff;
-    border-left: 4px solid #071e4f;
+    background-color: #58dceb;
+    border-left: 4px solid #2563eb;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
     white-space: pre-line;
     line-height: 1.6;
     font-size: 0.98rem;
-    color: #051730;
+    color: #8453ff73;
 }
