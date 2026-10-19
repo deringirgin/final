@@ -1,0 +1,116 @@
+/* Genel Sayfa Düzeni */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kart Kapsayıcısı */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Başlıklar */
+h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Form ve Dosya Yükleme Alanı */
+.upload-box {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.upload-box:hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* Butonlar */
+.btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    margin-top: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
+
+/* Sonuç Sayfası - Görsel Kutusu */
+.image-container {
+    margin-bottom: 25px;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* AI Analiz Kutusu */
+.result-card {
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-size: 0.98rem;
+    color: #334155;
+}
