@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    color: #333333;
+    background-color: #1F06AC;
+    color: #0F42C0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,10 +20,10 @@ body {
 
 /* Kart Kapsayıcısı - Tam Ortada ve Sabit Genişlikte */
 .container {
-    background-color: #ffffff;
+    background-color: #5882E8;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px #E3EF4F;
     max-width: 650px;
     width: 100%;
     text-align: center;
@@ -39,17 +39,17 @@ h1 {
 }
 
 p.subtitle {
-    color: #64748b;
+    color: #06D6A0;
     font-size: 1rem;
     margin-bottom: 30px;
 }
 
 /* Form ve Dosya Yükleme Alanı */
 .upload-box {
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed #F1A344;
     border-radius: 12px;
     padding: 30px;
-    background-color: #f8fafc;
+    background-color: #E3AFC9;
     transition: all 0.3s ease;
     margin-bottom: 25px;
 }
@@ -63,12 +63,12 @@ input[type="file"] {
     display: block;
     margin: 0 auto;
     font-size: 0.95rem;
-    color: #475569;
+    color: #413333;
 }
 
 /* Butonlar */
 .btn {
-    background-color: #2563eb;
+    background-color: #D9361E;
     color: #ffffff;
     border: none;
     padding: 12px 28px;
@@ -82,7 +82,7 @@ input[type="file"] {
 }
 
 .btn:hover {
-    background-color: #1d4ed8;
+    background-color: #ea6831;
 }
 
 .btn-secondary {
@@ -91,7 +91,7 @@ input[type="file"] {
 }
 
 .btn-secondary:hover {
-    background-color: #42d200;
+    background-color: #DB9558;
 }
 
 /* Sonuç Sayfası - Görsel Kutusu */
@@ -108,8 +108,8 @@ input[type="file"] {
 
 /* AI Analiz Kutusu */
 .result-card {
-    background-color: #58dceb;
-    border-left: 4px solid #2563eb;
+    background-color: #3f7379;
+    border-left: 4px solid #354870;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
