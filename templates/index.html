@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemeDecoder AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
 <body>
     <div class="container">
-        <h1>🤖 MemeDecoder AI 🤖</h1>
-        <p class="subtitle">Meme görselini yükle, yapay zeka Türkçeye çevirip esprisini açıklasın!</p>
+        <h1>🤖 MemeDecoder AI</h1>
+        <p class="subtitle">Meme görseli, GIF veya videosu yükle, yapay zeka Türkçeye çevirip esprisini açıklasın!</p>
         
         <form method="POST" enctype="multipart/form-data">
             <div class="upload-box">
-                <input type="file" name="file" accept="image/*" required>
+                <input type="file" name="file" accept="image/*,video/*" required>
             </div>
             <button type="submit" class="btn">Meme'i Çözümle</button>
         </form>

@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Analiz Sonucu</title>
+    <title>Meme Analiz Sonucu - MemeDecoder AI</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>🎯 Analiz Sonucu</h1>
-        <p class="subtitle">Yapay Zeka Çözümlemesi</p>
-
+        <h1>✨ Meme Çözümlendi!</h1>
+        <p class="subtitle">İşte yapay zeka analiz raporu:</p>
+        
         <div class="image-container">
-            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Yuklenen Meme">
+            {% if filename.endswith(('.mp4', '.mov', '.avi')) %}
+                <video controls width="100%" autoplay loop muted>
+                    <source src="{{ url_for('static', filename='uploads/' + filename) }}">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+            {% else %}
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Meme">
+            {% endif %}
         </div>
 
         <div class="result-card">
             {{ result }}
         </div>
 
-        <a href="/" class="btn btn-secondary">Yeni Bir Meme Analiz Et</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">← Yeni Bir Meme Analiz Et</a>
     </div>
 </body>
 </html>

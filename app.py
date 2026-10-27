@@ -9,7 +9,9 @@ load_dotenv()
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "static/uploads"
-ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
+ALLOWED_EXTENSIONS = {
+    "png", "jpg", "jpeg", "webp", "gif", "mp4", "mov", "avi"
+}
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # OOP Sınıfımızı çağırıyoruz

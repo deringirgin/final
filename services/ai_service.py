@@ -20,14 +20,14 @@ class MemeAIService:
 
     def _switch_to_next_key(self):
         if len(self.api_keys) > 1:
-            self.current_key_index = (self.current_key_index + 1) % len(
-                self.api_keys
-            )
+            self.current_key_index = (
+                self.current_key_index + 1
+            ) % len(self.api_keys)
             return True
         return False
 
     def analyze_meme(self, filepath):
-        max_retries = len(self.api_keys) * 2
+        max_retries = max(len(self.api_keys) * 2, 3)
 
         for attempt in range(max_retries):
             try:
@@ -50,13 +50,21 @@ class MemeAIService:
 
             except Exception as e:
                 error_str = str(e)
-                if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+                if (
+                    "429" in error_str
+                    or "RESOURCE_EXHAUSTED" in error_str
+                ):
                     if self._switch_to_next_key():
                         time.sleep(1)
                         continue
 
-                if "503" in error_str or "UNAVAILABLE" in error_str:
+                if (
+                    "503" in error_str
+                    or "UNAVAILABLE" in error_str
+                ):
                     time.sleep(2)
                     continue
 
                 return f"Yapay zeka analiz hatası: {error_str}"
+
+        return "Yapay zeka analiz hatası: Tüm API anahtarları kotaya takıldı."
